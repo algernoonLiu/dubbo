@@ -62,7 +62,7 @@ public class Application {
     private static void runWithRefer() {
         ReferenceConfig<DemoService> reference = new ReferenceConfig<>();
         reference.setApplication(new ApplicationConfig("dubbo-demo-api-consumer"));
-        reference.setRegistry(new RegistryConfig("zookeeper://127.0.0.1:2181"));
+        reference.setRegistry(new RegistryConfig("zookeeper://10.211.55.3:2181"));
         reference.setInterface(DemoService.class);
         DemoService service = reference.get();
         String message = service.sayHello("dubbo");
